@@ -1,0 +1,898 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZURAACO State</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+           .logo {
+     background: rgb(1, 1, 44);
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+       
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* NAVBAR */
+.navbar {
+    background: rgb(1, 1, 44);
+}
+ 
+.navbar-nav {
+    margin-left: 150px;
+    margin-right: 0;
+    display: flex;
+    gap: 15px;
+}
+ 
+.nav-link {
+    color: burlywood;
+    font-size: 23px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+.nav-link:hover{
+    color: black;
+}
+        /* HERO */
+        .hero-card {
+            position: relative;
+            border: 0;
+            border-radius: 0;
+        }
+
+        .card-img {
+            width: 100%;
+            height: clamp(300px, 45vw, 500px);
+            object-fit: cover;
+        }
+
+        .card-img-overlay {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            background: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.5),
+                transparent
+            );
+        }
+
+        .card-title {
+            font-size: clamp(20px, 3.2vw, 35px);
+            color: darkblue;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .card-text {
+            color: blanchedalmond;
+            font-size: clamp(14px, 2.4vw, 28px);
+            overflow-wrap: anywhere;
+        }
+
+        .card-tt {
+            color: rgba(5, 188, 239, 0.95);
+            font-weight: bold;
+            font-size: clamp(14px, 2.1vw, 25px);
+        }
+
+        .button {
+            display: inline-block;
+            background: darkblue;
+            text-decoration: none;
+            border: none;
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 9px 18px;
+            border-radius: 20px;
+            color: beige;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: #102b4e;
+            color: white;
+        }
+
+        /* HEADINGS */
+        .h1,
+        .h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            padding: 0 10px;
+            overflow-wrap: anywhere;
+        }
+
+        .h1 {
+            margin: 35px 0 20px;
+            font-size: clamp(22px, 4vw, 40px);
+            color: rgb(13, 65, 97);
+        }
+
+        .h2 {
+            margin: 20px 0;
+            font-size: clamp(22px, 3.4vw, 32px);
+            color: darkblue;
+        }
+
+        .title1 {
+            margin-top: 20px;
+            font-family: "Times New Roman", serif;
+            font-weight: bold;
+            font-size: clamp(22px, 3vw, 28px);
+            color: rgb(4, 85, 132);
+        }
+
+        /* FEATURED PROJECTS */
+        .cord1 {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+            padding: 0 15px;
+        }
+
+        .cord {
+            width: 100%;
+            max-width: 320px;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .cord .card-img-top {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .body1 {
+            padding: 0 8px 15px;
+        }
+
+        .text1 {
+            overflow-wrap: anywhere;
+        }
+
+        .btn-solid {
+            display: inline-block;
+            background: rgb(30, 30, 88);
+            color: burlywood;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-solid:hover {
+            background: darkblue;
+            color: white;
+        }
+
+        /* ABOUT */
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            padding: 40px;
+        }
+
+        .about-text,
+        .about-image {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+
+        .about-text p {
+            font-size: clamp(16px, 1.5vw, 17px);
+            line-height: 1.8;
+            text-align: justify;
+            overflow-wrap: anywhere;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: clamp(240px, 32vw, 400px);
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* SERVICES */
+        .services-section {
+            background-image: url("const bg.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px 0;
+        }
+
+        .services-section .container {
+            max-width: 100%;
+        }
+
+        .card1,
+        .card2,
+        .card3 {
+            height: 100%;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        }
+
+        .title2,
+        .text2 {
+            font-family: "Times New Roman", serif;
+            text-align: center;
+            overflow-wrap: anywhere;
+            padding: 0 12px;
+        }
+
+        .title2 {
+            font-weight: bold;
+            font-size: clamp(22px, 3vw, 30px);
+            color: rgb(4, 85, 132);
+        }
+
+        .text2 {
+            font-size: clamp(15px, 2vw, 22px);
+            color: rgb(13, 65, 97);
+        }
+
+        /* PROPERTY GALLERIES */
+        .property-gallery,
+        .property-gallery1 {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            padding: 15px;
+            overflow-x: auto;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x proximity;
+        }
+
+        .property-gallery {
+            background-image: url("background_only.png");
+        }
+
+        .property-gallery1 {
+            background-image: url("light_building_wide.png");
+        }
+
+        .property-gallery img,
+        .property-gallery1 img {
+            width: clamp(200px, 60vw, 300px);
+            height: clamp(145px, 42vw, 200px);
+            flex: 0 0 auto;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            scroll-snap-align: start;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .property-gallery::-webkit-scrollbar,
+        .property-gallery1::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        @media (hover: hover) {
+            .property-gallery img:hover,
+            .property-gallery1 img:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .cord:hover img {
+                transform: scale(1.03);
+            }
+        }
+
+        /* WHY CHOOSE US */
+        .card-text4 {
+            margin: 25px 0 20px;
+            padding: 0 15px;
+            font-family: "Times New Roman", serif;
+            color: burlywood;
+            font-size: clamp(18px, 2.4vw, 26px);
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .card-row {
+            width: 100%;
+            display: flex; justify-content: center;
+            margin: 0 auto;
+            border: none;
+            background: rgb(1, 17, 39);
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .card-row img {
+            width: 45%;
+            max-width: 350px;
+            object-fit: cover;
+        }
+
+        .box {
+            padding: 0 15px; 
+        }
+
+        /* FOOTER */
+        .footer {
+            background: rgb(1, 1, 47);
+            color: white;
+            padding: 55px 7% 0;
+            border-top: 3px solid #d4af37;
+            margin-top: 40px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+            gap: 35px;
+            padding-bottom: 40px;
+        }
+
+        .footer-box {
+            min-width: 0;
+        }
+
+        .footer-logo {
+            color: #d4af37;
+            font-size: clamp(22px, 2.2vw, 26px);
+            margin-bottom: 18px;
+            overflow-wrap: anywhere;
+        }
+
+        .footer-logo span {
+            color: white;
+        }
+
+        .footer-box h3 {
+            color: #d4af37;
+            font-size: 19px;
+            margin-bottom: 20px;
+        }
+
+        .footer-box p {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.9;
+            overflow-wrap: anywhere;
+        }
+
+        .footer-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-box ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-box ul li a {
+            text-decoration: none;
+            color: #ccc;
+            transition: 0.3s ease;
+            overflow-wrap: anywhere;
+        }
+
+        .footer-box ul li a:hover {
+            color: #d4af37;
+            padding-left: 6px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px 0;
+            border-top: 1px solid #444;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #aaa;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        /* TABLET */
+        @media (max-width: 991px) {
+            .about {
+                flex-direction: column;
+                gap: 25px;
+                padding: 25px;
+            }
+
+            .about-text,
+            .about-image {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+
+            .footer {
+                padding: 40px 5% 0;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 25px;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .card-img-overlay {
+                margin-left: 0;
+                padding: 15px;
+                background: rgba(0, 0, 0, 0.25);
+            }
+
+            .card-title {
+                margin-top: 0;
+            }
+
+            .cord1 {
+                gap: 20px;
+            }
+
+            .cord1 .cord {
+                max-width: 420px;
+            }
+
+            .card-row {
+                flex-direction: column;
+            }
+
+            .card-row img {
+                width: 100%;
+                max-width: 100%;
+                max-height: 300px;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-img {
+                height: 330px;
+            }
+
+            .card-img-overlay {
+                padding: 12px;
+            }
+
+            .card-title {
+                font-size: 20px;
+            }
+
+            .card-text {
+                font-size: 14px;
+                line-height: 1.4;
+            }
+
+            .card-tt {
+                font-size: 13px;
+            }
+
+            .button {
+                margin-top: 5px;
+                padding: 7px 12px;
+            }
+
+            .cord1 {
+                gap: 18px;
+                margin-top: 20px;
+            }
+
+            .cord1 .cord {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .about {
+                padding: 20px 15px;
+                gap: 20px;
+            }
+
+            .about-text p {
+                line-height: 1.7;
+                text-align: left;
+            }
+
+            .property-gallery,
+            .property-gallery1 {
+                gap: 12px;
+                padding: 12px;
+            }
+
+            .footer {
+                padding: 35px 18px 0;
+                text-align: center;
+            }
+
+            .footer-container {
+                grid-template-columns: minmax(0, 1fr);
+                padding-bottom: 25px;
+            }
+
+            .footer-box h3 {
+                margin-bottom: 12px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+        /* SCROLL ANIMATION */
+        .reveal,
+        .reveal-card {
+            opacity: 0;
+            transition: opacity 1s ease,
+                        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal {
+            transform: translateY(50px);
+        }
+
+        .reveal-card {
+            transform: translateY(35px);
+        }
+
+        .reveal.show,
+        .reveal-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal,
+            .reveal-card {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            .cord img,
+            .property-gallery img,
+            .property-gallery1 img {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <img src="logo.png" alt="" class="logo">
+
+            <button class="navbar-toggler bg-light" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="property.html">For Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="card hero-card">
+        <img src="bg1.jpg" class="card-img" alt="Real estate properties">
+        <div class="card-img-overlay">
+            <h4 class="card-title">FIND YOUR DREAM HOME</h4>
+            <p class="card-text">Discover Exceptional Properties in Karachi.</p>
+            <p class="card-text">
+                Explore premium houses, modern apartments, <br> and luxury
+                residences designed for the way you live.
+            </p>
+            <h4 class="card-tt">EXPLORE PROPERTIES | CONTACT US</h4>
+            <a href="property.html" class="button">EXPLORE NOW</a>
+        </div>
+    </div>
+
+    <!-- FEATURED PROJECTS -->
+    <h1 class="h1">FEATURED PROJECTS</h1>
+
+    <div class="cord1">
+        <section class="cord">
+            <img src="nt.webp" class="card-img-top" alt="North Town Residency">
+            <div class="body1">
+                <h4 class="title1">North Town Residency</h4>
+                <p class="text1">A Best Project in Surjani Town Karachi</p>
+                <a href="north.html" class="btn-solid">MORE DETAILS</a>
+            </div>
+        </section>
+
+        <section class="cord">
+            <img src="ot.webp" class="card-img-top" alt="Malir Town Residency">
+            <div class="body1">
+                <h4 class="title1">Malir Town Residency</h4>
+                <p class="text1">A Best Project in Malir Town Karachi</p>
+                <a href="malir.html" class="btn-solid">MORE DETAILS</a>
+            </div>
+        </section>
+
+        <section class="cord">
+            <img src="kt.webp" class="card-img-top" alt="Korangi Town Residency">
+            <div class="body1">
+                <h4 class="title1">Korangi Town Residency</h4>
+                <p class="text1">A Best Project in Korangi Town Karachi</p>
+                <a href="korangi.html" class="btn-solid">MORE DETAILS</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about">
+        <div class="about-text">
+            <h1 class="h1">Designing Dreams Build Future</h1>
+            <p>
+                At <strong>ZURAACO Builders</strong> &amp; Developers, we
+                serve our customers with extremely low-cost housing facilities.
+                We do this by conveying quality and high-standard utility
+                projects that are designed to satisfy clients’ needs. So,
+                everyone can attain their dream house for themselves and turn
+                that dream into reality with GFS. We are the best construction
+                company in Pakistan – our projects speak for themselves. We
+                have one goal – to provide and facilitate excellent, luxurious
+                and most importantly, affordable housing services to our
+                customers. So, avail your dream space through GFS Builders
+                &amp; Developers and turn your living desires into achievements
+                with GFS Builders &amp; Developers in Pakistan.
+                <strong>ZURAACO – Where Quality Meets Affordability</strong>
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="info.webp" alt="North Town Residency NOC">
+        </div>
+    </div>
+
+    <!-- MARKETING SERVICES -->
+    <h1 class="h1">ZURAACO Marketing - Best Real Estate Company in Pakistan</h1>
+    <div class="h2">Real Estate Marketing Services We Offer</div>
+
+    <div class="services-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card1">
+                        <h4 class="title2">Commercial &amp; Residential</h4>
+                        <p class="text2">
+                            Estate Safe Marketing is one of the most trusted
+                            and highly professional leading real estate
+                            companies in Pakistan, specializing in marketing
+                            plots, apartments, houses, retail spaces, and more
+                            across Karachi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card2">
+                        <h4 class="title2">Housing Societies</h4>
+                        <p class="text2">
+                            Estate Safe Marketing focuses on affordable
+                            housing solutions that consider the good of the
+                            community, including well-designed apartments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card3">
+                        <h4 class="title2">Investment Opportunities</h4>
+                        <p class="text2">
+                            Explore property investment opportunities and find
+                            suitable residential and commercial properties
+                            across Karachi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARTNERS -->
+    <h1 class="h1">Our Partners</h1>
+
+    <div class="container-fluid">
+        <div class="property-gallery">
+            <img src="asr.webp" alt="Partner">
+            <img src="falak.webp" alt="Partner">
+            <img src="gfs.webp" alt="Partner">
+            <img src="saima.webp" alt="Partner">
+            <img src="gul.webp" alt="Partner">
+            <img src="marca.webp" alt="Partner">
+        </div>
+    </div>
+
+    <!-- HAPPY CLIENTS -->
+    <h1 class="h1">Our Happy Clients</h1>
+
+    <div class="container-fluid">
+        <div class="property-gallery1">
+            <img src="cl1.webp" alt="Happy client">
+            <img src="cl3.webp" alt="Happy client">
+            <img src="cl4.webp" alt="Happy client">
+            <img src="cl2.png" alt="Happy client">
+            <img src="cl5.webp" alt="Happy client">
+            <img src="cl6.webp" alt="Happy client">
+        </div>
+    </div>
+
+    <!-- WHY CHOOSE US -->
+    <h1 class="h1">
+        Why Choose Estate Safe Marketing – Best Real Estate Company in Pakistan
+    </h1>
+
+    <div class="box">
+        <div class="card card-row">
+            <img src="coin.webp" alt="Real estate investment">
+            <div class="body">
+                <p class="card-text4">
+                    MARKETERS<br>
+                    INVESTMENT<br>
+                    CONSULTANT<br>
+                    DEALER<br>
+                    PROMOTERS<br>
+                    DEVELOPERS
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2 class="footer-logo">ZURAACO <span>STATE</span></h2>
+                <p>
+                    Your trusted partner in real estate. Discover residential
+                    and commercial properties and explore new investment
+                    opportunities with Nuraato State.
+                </p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Our Projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#">Residential Properties</a></li>
+                    <li><a href="#">Commercial Properties</a></li>
+                    <li><a href="#">Property Investment</a></li>
+                    <li><a href="#">Plot Sales</a></li>
+                    <li><a href="#">Real Estate Consultancy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>📍 Karachi, Pakistan</p>
+                <p>🏠 Real Estate &amp; Property Investment</p>
+                <p>✉️ Contact us for property inquiries.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Nuraato State. All Rights Reserved.</p>
+            <p>Your Trust, Our Commitment.</p>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP JS: NAVBAR TOGGLE -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCROLL ANIMATION -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(
+                ".about, .property-gallery, .property-gallery1, .footer, .card1, .card2, .card3, .h1, .h2, .card-text4, .services-section"
+            );
+
+            sections.forEach(function (section) {
+                section.classList.add("reveal");
+            });
+
+            const cards = document.querySelectorAll(".cord1 .cord");
+
+            cards.forEach(function (card, index) {
+                card.classList.add("reveal-card");
+                card.style.transitionDelay = (index % 3) * 0.15 + "s";
+            });
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    } else {
+                        entry.target.classList.remove("show");
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: "0px 0px -30px 0px"
+            });
+
+            document.querySelectorAll(".reveal, .reveal-card").forEach(function (element) {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+</body>
+</html>

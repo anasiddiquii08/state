@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+</head>
+<style>
+    /* NAVBAR */
+      .logo {
+     background: rgb(1, 1, 44);
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+       
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgb(1, 1, 44);
+}
+
+.navbar-nav {
+    margin-left: 150px;
+    margin-right: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    color: burlywood;
+    font-size: 23px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+/* PROPERTY SEARCH AND FILTER */
+.property-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px 15px;
+    margin-top: 10px;
+    border: 1px solid black;
+    min-height: 80px;
+    background-color: rgb(3, 3, 42);
+}
+
+.property-controls input,
+.property-controls select {
+    padding: 12px 15px;
+    width: 280px;
+    max-width: 100%;
+    border: 2px solid darkblue;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    color: beige;
+    background-color: rgb(5, 2, 82);
+}
+
+.property-controls input:focus,
+.property-controls select:focus {
+    border-color: goldenrod;
+}
+
+.property-controls ::placeholder {
+    color: beige;
+}
+
+/* PROPERTY CONTAINERS */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* PROPERTY CARDS */
+.card-row {
+    display: flex;
+    flex-direction: row;
+    width: calc(50% - 10px);
+    max-width: 550px;
+    min-width: 0;
+    flex: 1 1 calc(50% - 10px);
+    margin-top: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(60px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.card-row.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CARD IMAGE */
+.card-row img {
+    width: 42%;
+    height: auto;
+    min-height: 250px;
+    object-fit: cover;
+    align-self: stretch;
+}
+
+/* CARD BODY */
+.card-row .card-body {
+    flex: 1;
+    min-width: 0;
+    padding: 18px 12px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.card-title {
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(13, 65, 97);
+    font-size: 22px;
+}
+
+.card-title1 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: darkblue;
+}
+
+.card-text {
+    line-height: 1.6;
+}
+
+.card-body button {
+    background: darkblue;
+    color: burlywood;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.card-body button:hover {
+    background: burlywood;
+    color: darkblue;
+}
+
+/* TABLET */
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        margin-left: 0;
+        gap: 8px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .container {
+        gap: 15px;
+    }
+
+    .card-row {
+        flex: 1 1 calc(50% - 15px);
+    }
+
+    .card-row img {
+        width: 38%;
+        min-height: 220px;
+    }
+
+    .card-title {
+        font-size: 19px;
+    }
+
+    .card-title1 {
+        font-size: 17px;
+    }
+
+    .card-row .card-body {
+        padding: 12px 8px;
+    }
+
+    .card-body button {
+        font-size: 13px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-nav {
+        margin-left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 8px 5px;
+    }
+
+    .property-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .property-controls input,
+    .property-controls select {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 0 12px;
+    }
+
+    .card-row {
+        width: 100%;
+        max-width: 450px;
+        flex: 0 1 auto;
+        margin-top: 25px;
+        transform: translateY(35px);
+    }
+
+    .card-row.show {
+        transform: translateY(0);
+    }
+
+    .card-row img {
+        width: 40%;
+        min-height: 200px;
+        object-fit: cover;
+    }
+
+    .card-row .card-body {
+        padding: 12px 8px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        margin-top: 8px;
+    }
+
+    .card-title1 {
+        font-size: 16px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .card-body button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+
+    .card-row img {
+        width: 35%;
+        min-height: 180px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-title1 {
+        font-size: 14px;
+    }
+
+    .card-text {
+        font-size: 12px;
+    }
+
+    .card-body button {
+        font-size: 10px;
+        padding: 7px 5px;
+    }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    .card-row {
+        transition-duration: 0.01ms;
+    }
+}
+
+/* FOOTER */
+.footer {
+    background: rgb(1, 1, 47);
+    color: #fff;
+    padding: 55px 7% 0;
+    border-top: 3px solid #d4af37;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+    gap: 35px;
+    padding-bottom: 40px;
+}
+
+.footer-box {
+    min-width: 0;
+}
+
+.footer-logo {
+    color: #d4af37;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.footer-logo span {
+    color: white;
+}
+
+.footer-box h3 {
+    color: #d4af37;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.footer-box p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+    color: #d4af37;
+    padding-left: 6px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #aaa;
+    font-size: 13px;
+    margin: 0;
+}
+@media (max-width: 600px) {
+    .footer {
+        padding: 35px 20px 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-bottom: 25px;
+    }
+
+    .footer-logo {
+        font-size: 23px;
+    }
+
+    .footer-box h3 {
+        margin-bottom: 12px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
+
+<body>
+    <nav class="navbar sm:navbar-expand bg-1 fg-2">
+        <div class="container-fluid ">
+          <img src="logo.png" alt="" class="logo">
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <dialog class="drawer drawer-end" tabindex="-1" id="navbarNav" aria-labelledby="navbarNavLabel">
+                <div class="drawer-body">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="property.html">For Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
+
+    <!-- rent  -->
+     
+<div class="property-controls">
+    <input type="text" id="searchProperty"
+           placeholder="Search society or property name...">
+
+    <select id="filterProperty">
+        <option value="all">All Properties</option>
+        <option value="flat">Flats</option>
+        <option value="house">Houses</option>
+    </select>
+</div>
+
+    <div class="container">
+        <div class="card card-row" style="max-width: 550px;">
+            <img src="rent1.jpg" class="card-img-start" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">FALAK ENCLAVE</h4>
+                <h5 class="card-title1">FLAT FOR RENT</h5>
+                <p class="card-text">🛏️2 BED-LOUNGE <br>
+                    <strong>RS:50,000</strong>
+                </p>
+                <p class="card-text"><small class="fg-2">Last updated 3 days ago</small></p>
+                <a href=""><button>FOR MORE DETAILS</button></a>
+            </div>
+        </div>
+        <!-- 2  -->
+         <div class="card card-row" style="max-width: 550px;">
+            <img src="RENT2.jpg" class="card-img-start" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">BILQEES FLATS</h4>
+                <h5 class="card-title1">FLAT FOR RENT</h5>
+                <p class="card-text">🛏️1 BED-LOUNGE <br>
+                    <strong>RS:30,000</strong>
+                </p>
+                <p class="card-text"><small class="fg-2">Last updated 5 days ago</small></p>
+                <a href=""><button>FOR MORE DETAILS</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- 3 -->
+      <div class="container">
+        <div class="card card-row" style="max-width: 550px;">
+            <img src="rent4.jpg" class="card-img-start" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">ROOMI ENCLAVE</h4>
+                <h5 class="card-title1">FLAT FOR RENT</h5>
+                <p class="card-text">🛏️4 BED-LOUNGE <br>
+                    <strong>RS:60,000</strong>
+                </p>
+                <p class="card-text"><small class="fg-2">Last updated 10 days ago</small></p>
+                <a href=""><button>FOR MORE DETAILS</button></a>
+            </div>
+        </div>
+        <!-- 4  -->
+         <div class="card card-row" style="max-width: 550px;">
+            <img src="rent3.jpg" class="card-img-start" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">RAUF VILLA</h4>
+                <h5 class="card-title1">FLAT FOR RENT</h5>
+                <p class="card-text">🛏️4 BED-LOUNGE <br>
+                    <strong>RS:40,000</strong>
+                </p>
+                <p class="card-text"><small class="fg-2">Last updated 3 days ago</small></p>
+                <a href=""><button>FOR MORE DETAILS</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- house  -->
+      <div class="container">
+        <div class="card card-row" style="max-width: 550px;">
+            <img src="rent6.jpg" class="card-img-start" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">HILLS VIEW SOCIETY</h4>
+                <h5 class="card-title1">HOUSE FOR RENT</h5>
+                <p class="card-text">🛏️4 BED-LOUNGE <br>
+                    <strong>RS:80,000</strong>
+                </p>
+                <p class="card-text"><small class="fg-2">Last updated 1 month ago</small></p>
+                <a href=""><button>FOR MORE DETAILS</button></a>
+            </div>
+            <!-- 2 -->
+        </div>
+         <div class="card card-row" style="max-width: 550px;">
+            <img src="rent5.jpg" class="card-img-start" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">KARIMI HOUSE</h4>
+                <h5 class="card-title1">HOUSE FOR RENT</h5>
+                <p class="card-text">🛏️6 BED-LOUNGE <br>
+                    <strong>RS:85,000</strong>
+                </p>
+                <p class="card-text"><small class="fg-2">Last updated 11 days ago</small></p>
+                <a href=""><button>FOR MORE DETAILS</button></a>
+            </div>
+        </div>
+        <!-- house  -->
+    </div>
+     <div class="container">
+        <div class="card card-row" style="max-width: 550px;">
+            <img src="rent7.jpg" class="card-img-start" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">HUSSAINI SOCIETY</h4>
+                <h5 class="card-title1">HOUSE FOR RENT</h5>
+                <p class="card-text">🛏️3 BED-LOUNGE <br>
+                    <strong>RS:35,000</strong>
+                </p>
+                <p class="card-text"><small class="fg-2">Last updated 19 days ago</small></p>
+                <a href=""><button>FOR MORE DETAILS</button></a>
+            </div>
+        </div>
+
+         <div class="card card-row" style="max-width: 550px;">
+            <img src="rent8.jpg" class="card-img-start" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">FEDERAL COLONY</h4>
+                <h5 class="card-title1">HOUSE FOR RENT</h5>
+                <p class="card-text">🛏️5 BED-LOUNGE <br>
+                    <strong>RS:55,000</strong>
+                </p>
+                <p class="card-text"><small class="fg-2">Last updated 27 days ago</small></p>
+                <a href=""><button>FOR MORE DETAILS</button></a>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h2 class="footer-logo">ZURAACO <span>STATE</span></h2>
+            <p>
+                Your trusted partner in real estate.
+                Discover residential and commercial properties
+                and explore new investment opportunities
+                with Nuraato State.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Our Services</h3>
+            <ul>
+                <li><a href="#">Residential Properties</a></li>
+                <li><a href="#">Commercial Properties</a></li>
+                <li><a href="#">Property Investment</a></li>
+                <li><a href="#">Plot Sales</a></li>
+                <li><a href="#">Real Estate Consultancy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <p>📍 Karachi, Pakistan</p>
+            <p>🏠 Real Estate & Property Investment</p>
+            <p>✉️ Contact us for property inquiries.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Nuraato State. All Rights Reserved.</p>
+        <p>Your Trust, Our Commitment.</p>
+    </div>
+</footer>
+    
+<script>
+const searchInput = document.getElementById("searchProperty");
+const filterSelect = document.getElementById("filterProperty");
+
+const propertyCards = document.querySelectorAll(".card-row");
+
+function filterProperties() {
+
+    const searchValue = searchInput.value.toLowerCase().trim();
+    const filterValue = filterSelect.value;
+
+    propertyCards.forEach(function(card) {
+
+        const propertyName = card.querySelector(".card-title")
+            .textContent.toLowerCase();
+
+        const propertyType = card.querySelector(".card-title1")
+            .textContent.toLowerCase();
+
+        const nameMatch = propertyName.includes(searchValue);
+
+        const typeMatch =
+            filterValue === "all" ||
+            propertyType.includes(filterValue);
+
+        if (nameMatch && typeMatch) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    // Hide empty containers
+    document.querySelectorAll(".container").forEach(function(container) {
+        const cards = container.querySelectorAll(".card-row");
+
+        if (cards.length > 0) {
+            const visibleCards = [...cards].some(function(card) {
+                return card.style.display !== "none";
+            });
+
+            container.style.display = visibleCards ? "flex" : "none";
+        }
+    });
+}
+
+searchInput.addEventListener("input", filterProperties);
+filterSelect.addEventListener("change", filterProperties);
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = document.querySelectorAll(".card-row");
+
+    const observer = new IntersectionObserver(function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show");
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    cards.forEach(function (card) {
+        observer.observe(card);
+    });
+
+});
+</script>
+</body>
+
+</html>

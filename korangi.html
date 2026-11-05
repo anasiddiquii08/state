@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+</head>
+<style>
+       .logo {
+     background: rgb(1, 1, 44);
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.navbar {
+   background: rgb(1, 1, 44);
+}
+ 
+.navbar-nav {
+    margin-left: 150px;
+    margin-right: 0;
+    display: flex;
+    gap: 15px;
+}
+ 
+.nav-link {
+    color: burlywood;
+    font-size: 23px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+.nav-link:hover{
+    color: black;
+}
+
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-left: 0 !important;
+        padding-top: 10px;
+        gap: 5px;
+    }
+
+    .nav-link {
+        font-size: 19px;
+    }
+}
+
+
+    .card-img {
+        height: 500px;
+    }
+
+    .h1 {
+        margin-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        color: rgb(13, 65, 97);
+    }
+
+    .h2 {
+        margin-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        color: darkblue;
+        margin-bottom: 20px;
+    }
+
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+        padding: 40px;
+    }
+
+    .about1 {
+        padding: 40px;
+    }
+    #plo {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.card {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 50px;
+}
+
+    .about-text {
+        width: 55%;
+    }
+
+    .about-text p {
+        font-size: 17px;
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+    .about-image {
+        width: 45%;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+       
+        border-radius: 12px;
+    }
+      #plo {
+        height: 450px;
+        width: 35%; border: none;
+        margin-left: 390px;
+        margin-top: 50px;
+
+    }
+        .contact-section {
+    background: rgb(2, 2, 76);
+    color: white;
+    padding: 70px 8%;
+    font-family: Arial, sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+}
+
+.contact-info h4 {
+    color: #c49a52;
+    letter-spacing: 3px;
+}
+
+.contact-info h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.contact-info h1 span {
+    color: #c49a52;
+}
+
+.contact-info > p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    margin: 22px 0;
+}
+
+.contact-item h3 {
+    color: #c49a52;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.contact-item p {
+    color: #ddd;
+}
+
+.contact-form {
+  
+    background-color: black;
+    padding: 30px;
+    border-radius: 12px;
+    border: none;
+}
+
+.contact-form h2 {
+    color: #c49a52;
+    margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: #303030;
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #c49a52;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background: #c49a52;
+    color: #171717;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+#successMessage {
+    color: #c49a52;
+    margin-top: 15px;
+}
+.footer {
+     background: rgb(1, 1, 47);
+    color: #fff;
+    padding: 55px 7% 0;
+    border-top: 3px solid #d4af37;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+    gap: 35px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    color: #d4af37;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.footer-logo span {
+    color: white;
+}
+
+.footer-box h3 {
+    color: #d4af37;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.footer-box p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+    color: #d4af37;
+    padding-left: 6px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #aaa;
+    font-size: 13px;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-info h1 {
+        font-size: 32px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+/* Tablet */
+@media (max-width: 992px) {
+    .navbar-nav {
+        margin-left: 0;
+    }
+
+    .about {
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .about-text,
+    .about-image {
+        width: 50%;
+    }
+
+    #plo {
+        width: 60%;
+        height: auto;
+        margin: 30px auto;
+        display: block;
+    }
+
+    .contact-container {
+        gap: 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        font-size: 19px;
+    }
+
+    .card-img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-text,
+    .about-image {
+        width: 100%;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .about1 {
+        padding: 20px;
+    }
+
+    #plo {
+        width: 100%;
+        height: auto;
+        margin: 25px auto;
+    }
+
+    .contact-section {
+        padding: 40px 5%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-info h1 {
+        font-size: 30px;
+    }
+
+    .contact-form {
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+    .h1,
+    .h2 {
+        font-size: 24px;
+    }
+
+    .card-img {
+        height: 230px;
+    }
+
+    .about {
+        padding: 15px;
+    }
+
+    .contact-info h1 {
+        font-size: 26px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(55px);
+    transition: opacity 0.9s ease,
+                transform 0.9s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+</style>
+
+<body>
+    <nav class="navbar sm:navbar-expand bg-1 fg-2">
+        <div class="container-fluid ">
+            <img src="logo.png" alt="" class="logo">
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <dialog class="drawer drawer-end" tabindex="-1" id="navbarNav" aria-labelledby="navbarNavLabel">
+                <div class="drawer-body">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="property.html">For Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
+
+  <!-- bg -->
+     <div class="card theme-inverse">
+  <img src="korangi bg.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+  </div>
+</div>
+    <!-- info -->
+    <div class="about">
+        <div class="about-text">
+            <h1 class="h1">Location of Korangi Town Residency</h1>
+
+            <p>
+                Korangi Town Residency is strategically located near 51-C and Korangi Green. This prime location ensures
+                connectivity to all essentials, making it the perfect choice for residents seeking convenience and a
+                peaceful environment.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="korangi map.webp" alt="North Town Residency NOC">
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="about-text">
+            <h1 class="h1">Owners & Developers of Korangi Chase Mall</h1>
+
+            <p>
+                The project is developed by <strong>ZURAACO Builders & Developers</strong>, a leading name in Pakistan’s
+                real estate industry. With a record of delivering successful projects, GFS Builders prioritize. They
+                ensures quality construction and timely delivery with modern infrastructure and long term value for
+                investors making sure affordabaility and customer-centric solutions. <br>
+
+                Estate Safe Marketing has signed the MOU (Memorandum of Understanding) with the GFS Builders &
+                Developers and now Estate Safe Marketing is proud official marketing of the projects, making sure the
+                best marketing in affordabale price to make its customers satisfy . If you need any guidance regarding
+                the affordable house , appartments, villas and shops.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="korangi chase.webp" alt="North Town Residency NOC">
+        </div>
+    </div>
+
+    <div class="about1">
+
+        <h1 class="h1">Facilities & Amenities in Korangi Chase Mall</h1>
+
+
+        <p>Korangi Chase Mall offers world-class facilities and amenities, including: <br></p>
+        <p><strong>24/7 CCTV Surveillance </strong><br>
+            Well security systems ensure safety for businesses, visitors, and staff at all times.</p>
+
+        <p><strong>Fully Air-Conditioned Environment </strong><br>
+            A comfortable shopping experience is guaranteed with centralized air conditioning.</p>
+
+        <p><strong>Parking Area</strong><br>
+            In Korangi Chase Mall a spacious and organized parking facility accommodates visitors’ vehicles
+            conveniently.</p>
+
+        <p><strong>Clean & Modern Architecture</strong><br>
+            The Korangi Chase Mall features modern design that reflects elegance and functionality, making it a well
+            place
+            for different brands and businesses.</p>
+
+        <p><strong>Maintenance & Support Services</strong><br>
+            In Korangi Chase Mall there is specific team ensure smooth maintenance of facilities for businesses and
+            visitors.</p>
+
+    </div>
+
+    <div class="about1">
+        <h1 class="h1">Why Choose to Invest in Korangi Chase Mall</h1>
+
+        <p>Investing in <strong>Korangi Chase Mall </strong>offers various advantages as follows:</p>
+
+        <p>
+            <strong>Prime Location:</strong>
+            Situated in the busy Korangi 51-C area, ensuring high footfall and business growth.
+        </p>
+
+        <p>
+            <strong>Trusted Developers:</strong>
+            A project by GFS Builders, known for delivering value-driven projects.
+        </p>
+
+        <p>
+            <strong>Modern Facilities:</strong>
+            Equipped with modern amenities to attract top brands and businesses.
+        </p>
+
+        <p>
+            <strong>Official Marketing Partner:</strong>
+            Estate Safe Marketing ensures a transparent and professional booking process.
+        </p>
+
+        <p>
+            <strong>High Demand:</strong>
+            Growing commercial demand in Korangi makes this project an effective investment opportunity.
+        </p>
+    </div>
+ <h1 class="h1">Korangi Town Residency Phase 2 Block Payment Plan:</h1>
+    <div class="card mb-3">
+        <img src="north payment.webp" class="card-img-top" alt="..." id="plo">
+    </div>
+
+    <!-- contact -->
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h4>GET IN TOUCH</h4>
+                <h1>Contact <span>Us</span></h1>
+
+                <p>
+                    Looking for your dream plot in Malir, Karachi?
+                    Contact our team for plot details, prices and
+                    booking information.
+                </p>
+
+                <div class="contact-item">
+                    <h3>📍 Our Location</h3>
+                    <p>Malir, Karachi, Pakistan</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>📞 Phone Number</h3>
+                    <p>+92 300 1234567</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>✉ Email Address</h3>
+                    <p>info@example.com</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+
+                <form id="contactForm">
+                    <input type="text" placeholder="Your Full Name" required>
+
+                    <input type="email" placeholder="Your Email Address" required>
+
+                    <input type="tel" placeholder="Your Phone Number" required>
+
+                    <select required>
+                        <option value="">Select Your Interest</option>
+                        <option>Residential Plot</option>
+                        <option>Commercial Plot</option>
+                        <option>Plot Booking</option>
+                        <option>General Inquiry</option>
+                    </select>
+
+                    <textarea rows="5" placeholder="Write your message here..." required></textarea>
+
+                    <button type="submit">SEND MESSAGE</button>
+
+                    <p id="successMessage"></p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h2 class="footer-logo">ZURAACO <span>STATE</span></h2>
+            <p>
+                Your trusted partner in real estate.
+                Discover residential and commercial properties
+                and explore new investment opportunities
+                with Nuraato State.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Our Services</h3>
+            <ul>
+                <li><a href="#">Residential Properties</a></li>
+                <li><a href="#">Commercial Properties</a></li>
+                <li><a href="#">Property Investment</a></li>
+                <li><a href="#">Plot Sales</a></li>
+                <li><a href="#">Real Estate Consultancy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <p>📍 Karachi, Pakistan</p>
+            <p>🏠 Real Estate & Property Investment</p>
+            <p>✉️ Contact us for property inquiries.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Nuraato State. All Rights Reserved.</p>
+        <p>Your Trust, Our Commitment.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+document.getElementById("contactForm").addEventListener("submit",
+    function(event) {
+        event.preventDefault();
+
+        document.getElementById("successMessage").textContent =
+            "Thank you! Your message has been received.";
+
+        this.reset();
+    }
+);
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const sections = document.querySelectorAll(
+        ".about, .about1, .contact-section, .footer, .card, .h1, .h2"
+    );
+
+    sections.forEach(section => {
+        section.classList.add("reveal");
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show");
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+});
+</script>
+</body >
+
+</html >
