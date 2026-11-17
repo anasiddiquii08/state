@@ -1,14 +1,75 @@
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Properties for Rent in Karachi | Zuraa Co Estate</title>
-<meta name="description" content="Flats and houses for rent in Karachi. Contact Zuraa Co Estate on WhatsApp.">
+<html lang="en-PK">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO TITLE & DESCRIPTION -->
+    <title>Flats & Houses for Rent in Karachi | ZURAACO Builders & Developers</title>
+
+    <meta name="description"
+        content="Find flats and houses for rent in Karachi with ZURAACO Builders & Developers. Explore rental properties, compare prices and contact us directly on WhatsApp.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ZURAACO Builders & Developers">
+    <meta name="theme-color" content="#01012c">
+
+    <!-- CANONICAL URL -->
+    <link rel="canonical"
+        href="https://anasiddiquii08.github.io/state/property.html">
+
+    <!-- FAVICON / BROWSER TAB LOGO -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="Flats & Houses for Rent in Karachi | ZURAACO">
+    <meta property="og:description"
+        content="Explore rental flats and houses in Karachi with ZURAACO Builders & Developers. Find a property that suits your needs.">
+    <meta property="og:url"
+        content="https://anasiddiquii08.github.io/state/property.html">
+    <meta property="og:site_name" content="ZURAACO Builders & Developers">
+    <meta property="og:image"
+        content="https://anasiddiquii08.github.io/state/logo.png">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title"
+        content="Flats & Houses for Rent in Karachi | ZURAACO">
+    <meta name="twitter:description"
+        content="Browse rental flats and houses in Karachi with ZURAACO Builders & Developers.">
+    <meta name="twitter:image"
+        content="https://anasiddiquii08.github.io/state/logo.png">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "ZURAACO Builders & Developers",
+        "url": "https://anasiddiquii08.github.io/state/",
+        "logo": "https://anasiddiquii08.github.io/state/logo.png",
+        "areaServed": {
+            "@type": "City",
+            "name": "Karachi"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Karachi",
+            "addressCountry": "PK"
+        }
+    }
+    </script>
 
 <style>
 :root {
@@ -45,7 +106,7 @@ img {
     height: auto;
 }
 
-/* NAVBAR - UNCHANGED */
+/* NAVBAR - ORIGINAL CSS, UNCHANGED */
 
 .logo {
     background: var(--navy);
@@ -59,13 +120,13 @@ img {
     background: rgb(1, 1, 44);
 }
 
-.navbar-nav {
-    margin-left: 150px;
-    margin-right: 0;
-    display: flex;
-    gap: 15px;
-}
 
+        .navbar-nav {
+            margin-left: 150px;
+            margin-right: 0;
+            display: flex;
+            gap: 15px;
+        }
 .nav-link {
     color: burlywood;
     font-size: 23px;
@@ -334,93 +395,6 @@ img {
     font-size: clamp(26px, 4vw, 36px);
 }
 
-.wrap {
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.stats {
-    background: var(--navy);
-    color: #fff;
-}
-
-.stats h2 {
-    color: var(--gold);
-}
-
-.stat-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
-    gap: 20px;
-    text-align: center;
-}
-
-.stat b {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    font-size: 44px;
-    color: var(--gold);
-}
-
-/* REVIEWS */
-
-.reviews {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-    gap: 22px;
-}
-
-.review {
-    background: linear-gradient(145deg, #fff8ed, #eadcc8);
-    border: 1px solid #d8c3a5;
-    border-left: 4px solid var(--gold);
-    border-radius: 12px;
-    padding: 22px;
-    box-shadow: 0 5px 18px rgba(1,1,44,.09);
-    transition: .3s ease;
-    min-width: 0;
-}
-
-.review:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(1,1,44,.16);
-}
-
-.review p {
-    margin: 0 0 12px;
-    line-height: 1.7;
-    color: #44372d;
-    overflow-wrap: break-word;
-}
-
-.review span {
-    font-weight: 700;
-    color: #927044;
-}
-
-/* FAQ */
-
-details {
-    background: #fff;
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 8px rgba(1,1,44,.07);
-}
-
-summary {
-    cursor: pointer;
-    font-weight: 700;
-    color: var(--navy);
-    line-height: 1.5;
-}
-
-details p {
-    margin: 12px 0 0;
-    line-height: 1.7;
-}
-
 /* MAP */
 
 .map {
@@ -596,12 +570,22 @@ details p {
         padding: 15px;
     }
 
-    .stat b {
-        font-size: 36px;
-    }
-
     .map {
         height: 320px;
+    }
+}
+
+/* MOBILE NAVBAR */
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-left: 0;
+        gap: 5px;
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        font-size: 18px;
     }
 }
 
@@ -662,28 +646,6 @@ details p {
         margin-bottom: 22px;
     }
 
-    .reviews {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 16px;
-    }
-
-    .review {
-        padding: 19px;
-    }
-
-    .stat-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 25px 12px;
-    }
-
-    .stat b {
-        font-size: 34px;
-    }
-
-    details {
-        padding: 14px;
-    }
-
     .map {
         height: 280px;
     }
@@ -738,14 +700,6 @@ details p {
         font-size: 19px;
     }
 
-    .stat b {
-        font-size: 29px;
-    }
-
-    .review {
-        padding: 15px;
-    }
-
     .footer {
         padding-left: 15px;
         padding-right: 15px;
@@ -784,189 +738,152 @@ details p {
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <img src="logo.png" alt="" class="logo">
+<!-- NAVBAR - UNCHANGED -->
+ <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
 
-        <button class="navbar-toggler bg-light" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-            aria-controls="navbarMenu" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <img src="logo.png" alt="ZURAACO Builders and Developers logo" class="logo">
 
-        <div class="collapse navbar-collapse" id="navbarMenu">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="property.html">For Rent</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="property.html">For Rent</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+
+                </ul>
+
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 <!-- HERO -->
+
 <header class="hero reveal">
+
     <div>
-        <h1>Find Your Next Home in Karachi</h1>
-        <p>Verified flats and houses for rent. Pick a property and chat with us on WhatsApp.</p>
+        <h1>Flats and Houses for Rent in Karachi</h1>
+
+        <p>
+            Explore available rental properties in Karachi.
+            Compare property options and contact ZURAACO Builders & Developers
+            directly for more information.
+        </p>
+
         <a href="#listing" class="btn-gold">Browse Properties</a>
     </div>
+
 </header>
 
 <!-- SEARCH AND FILTERS -->
-<div class="property-controls reveal">
-    <input type="text" id="searchProperty" placeholder="Search society or property name...">
 
-    <select id="filterProperty">
+<section class="property-controls reveal" aria-label="Search and filter rental properties">
+
+    <input
+        type="text"
+        id="searchProperty"
+        placeholder="Search society or property name..."
+        aria-label="Search rental properties">
+
+    <select id="filterProperty" aria-label="Filter by property type">
         <option value="all">All Properties</option>
         <option value="flat">Flats</option>
         <option value="house">Houses</option>
     </select>
 
-    <select id="filterPrice">
+    <select id="filterPrice" aria-label="Filter by rental price">
         <option value="all">Any Price</option>
         <option value="0-40000">Under 40,000</option>
         <option value="40000-60000">40,000 - 60,000</option>
         <option value="60000-999999">Above 60,000</option>
     </select>
 
-    <select id="filterBeds">
+    <select id="filterBeds" aria-label="Filter by bedrooms">
         <option value="all">Any Bedrooms</option>
         <option value="1-2">1 - 2 Bed</option>
         <option value="3-4">3 - 4 Bed</option>
         <option value="5-9">5+ Bed</option>
     </select>
-</div>
+
+</section>
 
 <!-- PROPERTY LIST -->
-<main class="listing" id="listing"></main>
 
-<!-- STATS -->
-<section class="sec stats reveal">
-    <div class="wrap">
-        <h2>Why people choose us</h2>
-
-        <div class="stat-row">
-            <div class="stat">
-                <b data-n="100">0</b>
-                Properties listed
-            </div>
-
-            <div class="stat">
-                <b data-n="50">0</b>
-                Happy clients
-            </div>
-
-            <div class="stat">
-                <b data-n="5">0</b>
-                Years in Karachi
-            </div>
-
-            <div class="stat">
-                <b data-n="24">0</b>
-                Hour reply time
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="sec reveal">
-    <div class="wrap">
-        <h2>What our clients say</h2>
-
-        <div class="reviews">
-            <div class="review">
-                <p>Name aur review yahan likho. Asli client ka review hi lagana.</p>
-                <span>Client Name, Gulshan</span>
-            </div>
-
-            <div class="review">
-                <p>Name aur review yahan likho. Asli client ka review hi lagana.</p>
-                <span>Client Name, Malir</span>
-            </div>
-
-            <div class="review">
-                <p>Name aur review yahan likho. Asli client ka review hi lagana.</p>
-                <span>Client Name, Korangi</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="sec reveal" style="background:#ece7da">
-    <div class="wrap" style="max-width:800px">
-        <h2>Common questions</h2>
-
-        <details>
-            <summary>Property dekhne ka process kya hai?</summary>
-            <p>Property pe Contact Us dabayein, WhatsApp pe humein message karein, hum viewing ka time tay kar denge.</p>
-        </details>
-
-        <details>
-            <summary>Kya advance ya commission lagta hai?</summary>
-            <p>Yahan apni asli policy likhein (jaise ek mahine ka kiraya commission).</p>
-        </details>
-
-        <details>
-            <summary>Kaun se documents chahiye honge?</summary>
-            <p>Yahan likhein: CNIC copy, job/business proof, wagera.</p>
-        </details>
-
-        <details>
-            <summary>Kya aap sale ya plot ki properties bhi dete hain?</summary>
-            <p>Haan, plots aur commercial ke liye hum se rabta karein.</p>
-        </details>
-    </div>
-</section>
+<main class="listing" id="listing" aria-label="Rental properties in Karachi"></main>
 
 <!-- MAP -->
+
 <section class="sec reveal">
+
     <div class="wrap">
-        <h2>Find us</h2>
-        <iframe class="map" loading="lazy" title="Our location"
+
+        <h2>Find Us in Karachi</h2>
+
+        <iframe
+            class="map"
+            loading="lazy"
+            title="Map showing Karachi, Pakistan"
             src="https://www.google.com/maps?q=Karachi,Pakistan&output=embed">
         </iframe>
+
     </div>
+
 </section>
 
 <!-- FOOTER -->
+
 <footer class="footer reveal">
+
     <div class="footer-container">
 
         <div class="footer-box">
-            <h2 class="footer-logo">ZURAACO <span>STATE</span></h2>
+
+            <h2 class="footer-logo">ZURAACO <span>BUILDERS</span></h2>
+
             <p>
                 Your trusted partner in real estate. Discover residential
-                and commercial properties and explore new investment
-                opportunities with Nuraato State.
+                and commercial properties and explore property opportunities
+                with ZURAACO Builders & Developers in Karachi, Pakistan.
             </p>
+
         </div>
 
         <div class="footer-box">
+
             <h3>Quick Links</h3>
+
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html">For Rent</a></li>
+                <li><a href="property.html">For Rent</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+
         </div>
 
         <div class="footer-box">
+
             <h3>Our Services</h3>
+
             <ul>
                 <li><a href="property.html">Residential Properties</a></li>
                 <li><a href="malir.html">Commercial Properties</a></li>
@@ -974,39 +891,59 @@ details p {
                 <li><a href="north.html">Plot Sales</a></li>
                 <li><a href="about.html">Real Estate Consultancy</a></li>
             </ul>
+
         </div>
 
         <div class="footer-box">
+
             <h3>Contact Us</h3>
+
             <p>📍 Karachi, Pakistan</p>
             <p>🏠 Real Estate &amp; Property Investment</p>
             <p>✉️ Contact us for property inquiries.</p>
+
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 Zuraaco State. All Rights Reserved.</p>
+
+        <p>© 2026 ZURAACO Builders & Developers. All Rights Reserved.</p>
+
         <p>Your Trust, Our Commitment.</p>
+
     </div>
+
 </footer>
 
-<!-- FLOATING BUTTONS -->
-<a class="wa-float" target="_blank" rel="noopener"
-    aria-label="Chat on WhatsApp"
-    href="https://wa.me/923132724720?text=Assalam%20o%20Alaikum%2C%20mujhe%20property%20ke%20bare%20mein%20info%20chahiye.">
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a class="wa-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact ZURAACO on WhatsApp"
+   href="https://wa.me/923132724720?text=Assalam%20o%20Alaikum%2C%20mujhe%20property%20ke%20bare%20mein%20info%20chahiye.">
+
     💬
+
 </a>
+
+<!-- BACK TO TOP -->
 
 <button class="totop" id="totop" aria-label="Back to top">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+
+/* WHATSAPP NUMBER */
+
 var NUMBER = "923132724720";
 
 /* PROPERTY DATA */
+
 var PROPS = [
+
     {
         name: "FALAK ENCLAVE",
         type: "flat",
@@ -1016,6 +953,7 @@ var PROPS = [
         upd: "3 days ago",
         status: "Available"
     },
+
     {
         name: "BILQEES FLATS",
         type: "flat",
@@ -1025,6 +963,7 @@ var PROPS = [
         upd: "5 days ago",
         status: "Available"
     },
+
     {
         name: "ROOMI ENCLAVE",
         type: "flat",
@@ -1034,6 +973,7 @@ var PROPS = [
         upd: "10 days ago",
         status: "Available"
     },
+
     {
         name: "RAUF VILLA",
         type: "flat",
@@ -1043,6 +983,7 @@ var PROPS = [
         upd: "3 days ago",
         status: "Available"
     },
+
     {
         name: "HILLS VIEW SOCIETY",
         type: "house",
@@ -1052,6 +993,7 @@ var PROPS = [
         upd: "1 month ago",
         status: "Available"
     },
+
     {
         name: "KARIMI HOUSE",
         type: "house",
@@ -1061,6 +1003,7 @@ var PROPS = [
         upd: "11 days ago",
         status: "Available"
     },
+
     {
         name: "HUSSAINI SOCIETY",
         type: "house",
@@ -1070,6 +1013,7 @@ var PROPS = [
         upd: "19 days ago",
         status: "Available"
     },
+
     {
         name: "FEDERAL COLONY",
         type: "house",
@@ -1079,17 +1023,23 @@ var PROPS = [
         upd: "27 days ago",
         status: "Available"
     }
+
 ];
 
 /* SCROLL REVEAL ANIMATION */
+
 var revealObserver = new IntersectionObserver(function(entries) {
+
     entries.forEach(function(entry) {
+
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
         } else {
             entry.target.classList.remove("show");
         }
+
     });
+
 }, {
     threshold: 0.15
 });
@@ -1099,6 +1049,7 @@ document.querySelectorAll(".reveal").forEach(function(element) {
 });
 
 /* PROPERTY LIST */
+
 var list = document.getElementById("listing");
 
 var favs = [];
@@ -1108,15 +1059,19 @@ try {
 } catch (e) {}
 
 /* PRICE FORMAT */
+
 function money(n) {
-    return "RS:" + n.toLocaleString("en-US");
+    return "RS: " + n.toLocaleString("en-US");
 }
 
 /* BUILD PROPERTY CARDS */
+
 function build() {
+
     list.innerHTML = "";
 
     PROPS.forEach(function(p, i) {
+
         var c = document.createElement("article");
 
         c.className = "card-row reveal";
@@ -1125,31 +1080,37 @@ function build() {
         var rented = p.status === "Rented";
 
         c.innerHTML =
-            '<div class="media">' +
-                '<img src="' + p.imgs[0] + '" loading="lazy" alt="' +
-                p.name + ' ' + p.beds + ' bed ' + p.type + ' for rent">' +
 
-                '<span class="badge-s ' + (rented ? "rented" : "") + '">' +
+            '<div class="media">' +
+
+                '<img src="' + p.imgs[0] +
+                '" loading="lazy" alt="' +
+                p.name + ' ' + p.beds + ' bedroom ' +
+                p.type + ' for rent in Karachi">' +
+
+                '<span class="badge-s ' +
+                (rented ? "rented" : "") + '">' +
                 p.status + '</span>' +
 
                 '<button class="fav ' +
                 (favs.indexOf(p.name) > -1 ? "on" : "") +
-                '" aria-label="Save property">♥</button>' +
+                '" aria-label="Save ' + p.name + ' property">♥</button>' +
 
                 (p.imgs.length > 1
-                    ? '<button class="nav-btn prev" aria-label="Previous">‹</button>' +
-                      '<button class="nav-btn next" aria-label="Next">›</button>'
+                    ? '<button class="nav-btn prev" aria-label="Previous image">‹</button>' +
+                      '<button class="nav-btn next" aria-label="Next image">›</button>'
                     : '') +
 
             '</div>' +
 
             '<div class="card-body">' +
-                '<h4 class="card-title">' + p.name + '</h4>' +
 
-                '<h5 class="card-title1">' +
-                p.type.toUpperCase() + ' FOR RENT</h5>' +
+                '<h2 class="card-title">' + p.name + '</h2>' +
 
-                '<p class="card-text">🛏️' + p.beds +
+                '<h3 class="card-title1">' +
+                p.type.toUpperCase() + ' FOR RENT</h3>' +
+
+                '<p class="card-text">🛏️ ' + p.beds +
                 ' BED-LOUNGE<br><strong>' + money(p.price) +
                 '</strong></p>' +
 
@@ -1165,8 +1126,8 @@ function build() {
 
         list.appendChild(c);
 
-        /* Observe dynamically created cards for animation */
         revealObserver.observe(c);
+
     });
 
     var e = document.createElement("div");
@@ -1177,11 +1138,13 @@ function build() {
     e.textContent = "Koi property nahi mili. Filter ya search badal kar dekhein.";
 
     list.appendChild(e);
+
 }
 
 build();
 
 /* WHATSAPP, FAVORITES AND IMAGE SLIDER */
+
 list.addEventListener("click", function(ev) {
 
     var card = ev.target.closest(".card-row");
@@ -1190,7 +1153,8 @@ list.addEventListener("click", function(ev) {
 
     var p = PROPS[card.dataset.i];
 
-    /* WhatsApp button */
+    /* WHATSAPP BUTTON */
+
     if (ev.target.classList.contains("wa-btn") && !ev.target.disabled) {
 
         var msg =
@@ -1204,9 +1168,11 @@ list.addEventListener("click", function(ev) {
             "https://wa.me/" + NUMBER + "?text=" + encodeURIComponent(msg),
             "_blank"
         );
+
     }
 
-    /* Favorite button */
+    /* FAVORITE BUTTON */
+
     if (ev.target.classList.contains("fav")) {
 
         var k = favs.indexOf(p.name);
@@ -1222,9 +1188,11 @@ list.addEventListener("click", function(ev) {
         try {
             localStorage.setItem("favs", JSON.stringify(favs));
         } catch (e) {}
+
     }
 
-    /* Image slider */
+    /* IMAGE SLIDER */
+
     if (ev.target.classList.contains("nav-btn")) {
 
         var img = card.querySelector(".media img");
@@ -1238,10 +1206,13 @@ list.addEventListener("click", function(ev) {
         ) % p.imgs.length;
 
         img.src = p.imgs[cur];
+
     }
+
 });
 
 /* SEARCH AND FILTERS */
+
 var q = document.getElementById("searchProperty");
 var ft = document.getElementById("filterProperty");
 var fp = document.getElementById("filterPrice");
@@ -1254,11 +1225,13 @@ function inRange(v, val) {
     var r = val.split("-");
 
     return v >= Number(r[0]) && v <= Number(r[1]);
+
 }
 
 function filterAll() {
 
     var s = q.value.toLowerCase().trim();
+
     var shown = 0;
 
     document.querySelectorAll(".card-row").forEach(function(card) {
@@ -1266,6 +1239,7 @@ function filterAll() {
         var p = PROPS[card.dataset.i];
 
         var ok =
+
             p.name.toLowerCase().indexOf(s) > -1 &&
             (ft.value === "all" || p.type === ft.value) &&
             inRange(p.price, fp.value) &&
@@ -1274,9 +1248,11 @@ function filterAll() {
         card.style.display = ok ? "" : "none";
 
         if (ok) shown++;
+
     });
 
     document.getElementById("empty").hidden = shown > 0;
+
 }
 
 [q, ft, fp, fb].forEach(function(el) {
@@ -1285,56 +1261,28 @@ function filterAll() {
         el === q ? "input" : "change",
         filterAll
     );
-});
 
-/* STATS COUNTER */
-var so = new IntersectionObserver(function(entries) {
-
-    entries.forEach(function(en) {
-
-        if (!en.isIntersecting) return;
-
-        var el = en.target;
-        var to = Number(el.dataset.n);
-        var n = 0;
-        var step = Math.max(1, Math.round(to / 50));
-
-        var t = setInterval(function() {
-
-            n = Math.min(to, n + step);
-
-            el.textContent = n + (to >= 50 ? "+" : "");
-
-            if (n >= to) {
-                clearInterval(t);
-            }
-
-        }, 30);
-
-        so.unobserve(el);
-    });
-
-}, {
-    threshold: .5
-});
-
-document.querySelectorAll("[data-n]").forEach(function(el) {
-    so.observe(el);
 });
 
 /* BACK TO TOP BUTTON */
+
 var toTop = document.getElementById("totop");
 
 window.addEventListener("scroll", function() {
+
     toTop.style.display = window.scrollY > 500 ? "block" : "none";
+
 });
 
 toTop.addEventListener("click", function() {
+
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
+
 });
+
 </script>
 
 </body>

@@ -1,12 +1,73 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-PK">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZURAACO State</title>
 
+    <!-- SEO TITLE & DESCRIPTION -->
+    <title>ZURAACO State | Real Estate & Properties in Karachi</title>
+
+    <meta name="description"
+        content="Explore residential and commercial properties in Karachi with ZURAACO State. Discover North Town Residency, Malir Town Residency, Korangi Town Residency and rental properties.">
+
+    <meta name="keywords"
+        content="ZURAACO State, real estate Karachi, properties in Karachi, houses for rent Karachi, residential properties Karachi, commercial properties Karachi, North Town Residency, Malir Town Residency, Korangi Town Residency">
+
+    <meta name="author" content="ZURAACO State">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#01012C">
+
+    <!-- CANONICAL URL -->
+    <link rel="canonical" href="https://anasiddiquii08.github.io/state/">
+
+    <!-- FAVICON: BROWSER TAB ICON -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- OPEN GRAPH SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ZURAACO State | Real Estate in Karachi">
+    <meta property="og:description"
+        content="Explore residential, commercial and rental properties in Karachi with ZURAACO State.">
+    <meta property="og:url" content="https://anasiddiquii08.github.io/state/">
+    <meta property="og:image" content="https://anasiddiquii08.github.io/state/bg1.jpg">
+    <meta property="og:site_name" content="ZURAACO State">
+    <meta property="og:locale" content="en_PK">
+
+    <!-- TWITTER SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZURAACO State | Real Estate in Karachi">
+    <meta name="twitter:description"
+        content="Find residential, commercial and rental properties in Karachi with ZURAACO State.">
+    <meta name="twitter:image" content="https://anasiddiquii08.github.io/state/bg1.jpg">
+
+    <!-- GOOGLE FONTS / BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "ZURAACO State",
+        "url": "https://anasiddiquii08.github.io/state/",
+        "logo": "https://anasiddiquii08.github.io/state/logo.png",
+        "image": "https://anasiddiquii08.github.io/state/bg1.jpg",
+        "description": "ZURAACO State provides information about residential, commercial and rental property opportunities in Karachi, Pakistan.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Karachi",
+            "addressCountry": "PK"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Karachi"
+        }
+    }
+    </script>
 
     <style>
         .logo {
@@ -38,7 +99,7 @@
             display: block;
         }
 
-        /* NAVBAR */
+        /* NAVBAR - UNCHANGED */
         .navbar {
             background: rgb(1, 1, 44);
         }
@@ -311,7 +372,6 @@
         }
 
         @media (hover: hover) {
-
             .property-gallery img:hover,
             .property-gallery1 img:hover {
                 transform: translateY(-5px);
@@ -342,7 +402,6 @@
             border: none;
             background: rgb(1, 17, 39);
             color: white;
-            display: flex;
             flex-direction: row;
             align-items: center;
         }
@@ -523,16 +582,6 @@
                 padding: 7px 12px;
             }
 
-            /* .cord1 {
-                gap: 18px;
-                margin-top: 20px;
-            }
-
-            .cord1 .cord {
-                width: 100%;
-                max-width: 100%;
-            } */
-
             .about {
                 padding: 20px 15px;
                 gap: 20px;
@@ -591,7 +640,6 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-
             .reveal,
             .reveal-card {
                 opacity: 1;
@@ -606,15 +654,14 @@
             }
         }
 
+        /* REVIEWS */
         .reviews {
-            /* max-width: 1000px; */
             margin: 40px auto;
             padding: 0 16px;
             font-family: Arial, sans-serif;
             position: relative;
-           width: 100%;
+            width: 100%;
         }
-
 
         .slider {
             display: flex;
@@ -624,55 +671,156 @@
             scroll-behavior: smooth;
             padding: 4px;
             scrollbar-width: none;
-
         }
 
         .slider1 {
             width: 100%;
-            height: 270px;
-            background-color: rgb(164, 159, 152)
+            min-height: 270px;
+            height: auto;
+            background-color: rgb(164, 159, 152);
+            padding: 10px 0;
+            overflow: hidden;
         }
 
         .slider::-webkit-scrollbar {
-            display: none; 
+            display: none;
         }
 
         .review {
             flex: 0 0 300px;
             scroll-snap-align: start;
-            border: 2px solid beige;
-            border-radius: 10px;
-            padding: 20px;
-            /* background: #fff */
-            background-color: lightgrey
+            border: 1px solid #D8C6A5;
+            border-radius: 14px;
+            padding: 25px;
+            background: linear-gradient(145deg, #FFFFFF, #F5F0E6);
+            box-shadow: 0 6px 20px rgba(1, 1, 44, 0.09);
+            transition: all 0.35s ease;
+        }
+
+        .review:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(1, 1, 44, 0.16);
+            border-color: #B08D57;
         }
 
         .review .stars {
-            color: #f5a623;
-            margin-bottom: 8px
+            color: #B08D57;
+            margin-bottom: 12px;
+            font-size: 19px;
+            letter-spacing: 3px;
         }
 
         .review p {
-            line-height: 1.6;
-            margin-bottom: 12px; color: black;
+            line-height: 1.8;
+            margin-bottom: 18px;
+            color: #514B43;
+            font-size: 15px;
         }
 
         .review b {
-            display: block; color:rgb(21, 0, 38)
+            display: block;
+            color: #01012C;
+            font-size: 16px;
+            margin-bottom: 5px;
         }
 
         .review span {
             font-size: 13px;
-            color:#86b700;
+            color: #A0804D;
+            font-weight: 600;
         }
 
-    
+        /* FAQ SECTION */
+        .sec {
+            padding: 70px 20px;
+            background: #F5F0E6 !important;
+        }
+
+        .h2 {
+            text-align: center;
+            color: #01012C;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .sec details {
+            background: #FFFFFF;
+            border: 1px solid #D8C6A5;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            padding: 20px 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(1, 1, 44, 0.06);
+        }
+
+        .sec summary {
+            color: #01012C;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+            padding-right: 30px;
+        }
+
+        .sec summary::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: -3px;
+            font-size: 25px;
+            color: #B08D57;
+            transition: 0.3s;
+        }
+
+        .sec details[open] summary::after {
+            content: '−';
+            color: #01012C;
+        }
+
+        .sec details p {
+            color: #625B50;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .sec details:hover {
+            border-color: #01012C;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(1, 1, 44, 0.12);
+        }
+
+        .sec details[open] {
+            background: #F9F6EF;
+            border-left: 4px solid #B08D57;
+        }
+
+        @media (max-width: 600px) {
+            .h2 {
+                font-size: 28px;
+            }
+
+            .sec details {
+                padding: 17px;
+            }
+
+            .sec summary {
+                font-size: 16px;
+            }
+
+            .review {
+                flex-basis: 85vw;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR - UNCHANGED -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <img src="logo.png" alt="" class="logo">
@@ -701,237 +849,317 @@
         </div>
     </nav>
 
-    <!-- HERO -->
-    <div class="card hero-card">
-        <img src="bg1.jpg" class="card-img" alt="Real estate properties">
-        <div class="card-img-overlay">
-            <h4 class="card-title">FIND YOUR DREAM HOME</h4>
-            <p class="card-text">Discover Exceptional Properties in Karachi.</p>
-            <p class="card-text">
-                Explore premium houses, modern apartments, <br> and luxury
-                residences designed for the way you live.
-            </p>
-            <h4 class="card-tt">EXPLORE PROPERTIES | CONTACT US</h4>
-            <a href="property.html" class="button">EXPLORE NOW</a>
-        </div>
-    </div>
+    <main>
 
-    <!-- FEATURED PROJECTS -->
-    <h1 class="h1">FEATURED PROJECTS</h1>
+        <!-- HERO -->
+        <section class="card hero-card">
+            <img src="bg1.jpg" class="card-img"
+                alt="Residential and commercial real estate properties in Karachi"
+                fetchpriority="high">
 
-    <div class="cord1">
-        <section class="cord">
-            <img src="nt.webp" class="card-img-top" alt="North Town Residency">
-            <div class="body1">
-                <h4 class="title1">North Town Residency</h4>
-                <p class="text1">A Best Project in Surjani Town Karachi</p>
-                <a href="north.html" class="btn-solid">MORE DETAILS</a>
+            <div class="card-img-overlay">
+                <h1 class="card-title">FIND YOUR DREAM HOME</h1>
+
+                <p class="card-text">
+                    Discover Exceptional Properties in Karachi.
+                </p>
+
+                <p class="card-text">
+                    Explore premium houses, modern apartments,
+                    and luxury residences designed for the way you live.
+                </p>
+
+                <h2 class="card-tt">EXPLORE PROPERTIES | CONTACT US</h2>
+
+                <a href="property.html" class="button">
+                    EXPLORE NOW
+                </a>
             </div>
         </section>
 
-        <section class="cord">
-            <img src="ot.webp" class="card-img-top" alt="Malir Town Residency">
-            <div class="body1">
-                <h4 class="title1">Malir Town Residency</h4>
-                <p class="text1">A Best Project in Malir Town Karachi</p>
-                <a href="malir.html" class="btn-solid">MORE DETAILS</a>
+        <!-- FEATURED PROJECTS -->
+        <h2 class="h1">FEATURED PROJECTS IN KARACHI</h2>
+
+        <div class="cord1">
+
+            <section class="cord">
+                <img src="nt.webp" class="card-img-top"
+                    alt="North Town Residency housing project in Surjani Town Karachi"
+                    loading="lazy">
+
+                <div class="body1">
+                    <h3 class="title1">North Town Residency</h3>
+                    <p class="text1">Explore residential opportunities in Surjani Town, Karachi.</p>
+                    <a href="north.html" class="btn-solid">MORE DETAILS</a>
+                </div>
+            </section>
+
+            <section class="cord">
+                <img src="ot.webp" class="card-img-top"
+                    alt="Malir Town Residency housing project in Karachi"
+                    loading="lazy">
+
+                <div class="body1">
+                    <h3 class="title1">Malir Town Residency</h3>
+                    <p class="text1">Explore residential opportunities in Malir Town, Karachi.</p>
+                    <a href="malir.html" class="btn-solid">MORE DETAILS</a>
+                </div>
+            </section>
+
+            <section class="cord">
+                <img src="kt.webp" class="card-img-top"
+                    alt="Korangi Town Residency housing project in Karachi"
+                    loading="lazy">
+
+                <div class="body1">
+                    <h3 class="title1">Korangi Town Residency</h3>
+                    <p class="text1">Explore residential opportunities in Korangi, Karachi.</p>
+                    <a href="korangi.html" class="btn-solid">MORE DETAILS</a>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ABOUT -->
+        <section class="about">
+
+            <div class="about-text">
+                <h2 class="h1">Designing Dreams, Building the Future</h2>
+
+                <p>
+                    At <strong>ZURAACO Builders &amp; Developers</strong>,
+                    we focus on helping people explore residential and
+                    commercial real estate opportunities in Karachi.
+                    Our aim is to make it easier for customers to discover
+                    properties that suit their needs and preferences.
+
+                    From residential projects to commercial spaces,
+                    we provide information about different property options
+                    and help customers explore suitable opportunities.
+
+                    Whether you are looking for a plot, a home, an apartment
+                    or a commercial property, explore the available options
+                    with ZURAACO.
+
+                    <strong>ZURAACO – Where Quality Meets Affordability.</strong>
+                </p>
             </div>
+
+            <div class="about-image">
+                <img src="const bg.jpg"
+                    alt="Real estate development and property information"
+                    loading="lazy">
+            </div>
+
         </section>
 
-        <section class="cord">
-            <img src="kt.webp" class="card-img-top" alt="Korangi Town Residency">
-            <div class="body1">
-                <h4 class="title1">Korangi Town Residency</h4>
-                <p class="text1">A Best Project in Korangi Town Karachi</p>
-                <a href="korangi.html" class="btn-solid">MORE DETAILS</a>
+        <!-- MARKETING SERVICES -->
+        <h2 class="h1">ZURAACO Real Estate Marketing Services in Karachi</h2>
+
+        <h2 class="h2">Real Estate Marketing Services We Offer</h2>
+
+        <section class="services-section">
+
+            <div class="container">
+                <div class="row g-4">
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card1">
+                            <h3 class="title2">Commercial &amp; Residential Properties</h3>
+
+                            <p class="text2">
+                                Explore residential and commercial property
+                                opportunities, including plots, apartments,
+                                houses and retail spaces across Karachi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card2">
+                            <h3 class="title2">Housing Societies</h3>
+
+                            <p class="text2">
+                                Discover housing society projects and explore
+                                available residential property options
+                                in different areas of Karachi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card3">
+                            <h3 class="title2">Property Investment Opportunities</h3>
+
+                            <p class="text2">
+                                Explore residential and commercial property
+                                options and learn more about available
+                                real estate opportunities in Karachi.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
         </section>
-    </div>
 
-    <!-- ABOUT -->
-    <div class="about">
-        <div class="about-text">
-            <h1 class="h1">Designing Dreams Build Future</h1>
-            <p>
-                At <strong>ZURAACO Builders</strong> &amp; Developers, we
-                serve our customers with extremely low-cost housing facilities.
-                We do this by conveying quality and high-standard utility
-                projects that are designed to satisfy clients’ needs. So,
-                everyone can attain their dream house for themselves and turn
-                that dream into reality with GFS. We are the best construction
-                company in Pakistan – our projects speak for themselves. We
-                have one goal – to provide and facilitate excellent, luxurious
-                and most importantly, affordable housing services to our
-                customers. So, avail your dream space through GFS Builders
-                &amp; Developers and turn your living desires into achievements
-                with GFS Builders &amp; Developers in Pakistan.
-                <strong>ZURAACO – Where Quality Meets Affordability</strong>
-            </p>
-        </div>
+        <!-- PARTNERS -->
+        <h2 class="h1">Our Partners</h2>
 
-        <div class="about-image">
-            <img src="const bg.jpg" alt="North Town Residency NOC">
-        </div>
-    </div>
+        <div class="container-fluid">
+            <div class="property-gallery" aria-label="ZURAACO partners gallery">
 
-    <!-- MARKETING SERVICES -->
-    <h1 class="h1">ZURAACO Marketing - Best Real Estate Company in Pakistan</h1>
-    <div class="h2">Real Estate Marketing Services We Offer</div>
+                <img src="asr.webp" alt="ASR partner" loading="lazy">
+                <img src="falak.webp" alt="Falak partner" loading="lazy">
+                <img src="gfs.webp" alt="GFS partner" loading="lazy">
+                <img src="saima.webp" alt="Saima partner" loading="lazy">
+                <img src="gul.webp" alt="Gul partner" loading="lazy">
+                <img src="marca.webp" alt="Marca partner" loading="lazy">
 
-    <div class="services-section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card1">
-                        <h4 class="title2">Commercial &amp; Residential</h4>
-                        <p class="text2">
-                            Estate Safe Marketing is one of the most trusted
-                            and highly professional leading real estate
-                            companies in Pakistan, specializing in marketing
-                            plots, apartments, houses, retail spaces, and more
-                            across Karachi.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card2">
-                        <h4 class="title2">Housing Societies</h4>
-                        <p class="text2">
-                            Estate Safe Marketing focuses on affordable
-                            housing solutions that consider the good of the
-                            community, including well-designed apartments.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card3">
-                        <h4 class="title2">Investment Opportunities</h4>
-                        <p class="text2">
-                            Explore property investment opportunities and find
-                            suitable residential and commercial properties
-                            across Karachi.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- PARTNERS -->
-    <h1 class="h1">Our Partners</h1>
+        <!-- HAPPY CUSTOMERS -->
+        <h2 class="h1">OUR HAPPY CUSTOMERS</h2>
 
-    <div class="container-fluid">
-        <div class="property-gallery">
-            <img src="asr.webp" alt="Partner">
-            <img src="falak.webp" alt="Partner">
-            <img src="gfs.webp" alt="Partner">
-            <img src="saima.webp" alt="Partner">
-            <img src="gul.webp" alt="Partner">
-            <img src="marca.webp" alt="Partner">
-        </div>
-    </div>
+        <section class="reviews" aria-label="Customer reviews">
 
-    <!-- HAPPY CLIENTS -->
-    <!-- <h1 class="h1">Our Happy Clients</h1>
+            <div class="slider1">
+                <div class="slider" id="slider">
 
-    <div class="container-fluid">
-        <div class="property-gallery1">
-            <img src="cl1.webp" alt="Happy client">
-            <img src="cl3.webp" alt="Happy client">
-            <img src="cl4.webp" alt="Happy client">
-            <img src="cl2.png" alt="Happy client">
-            <img src="cl5.webp" alt="Happy client">
-            <img src="cl6.webp" alt="Happy client">
-        </div>
-    </div> -->
+                    <article class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p>We bought our plot through Zuraaco Estate. Papers were clear and there were no hidden charges.</p>
+                        <b>Ahmed Raza</b>
+                        <span>Plot buyer</span>
+                    </article>
 
-    <!-- WHY CHOOSE US -->
+                    <article class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p>I was living abroad and they handled the whole purchase for me. Regular updates and honest advice.</p>
+                        <b>Sana Malik</b>
+                        <span>Overseas investor</span>
+                    </article>
 
- <h1 class="h1">OUR HAPPY CUSTOMERS</h1>
- 
-    <section class="reviews">
-       <div class="slider1">
-       
-            <div class="slider" id="slider">
+                    <article class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p>They showed us only homes that matched our budget. We moved in within a month.</p>
+                        <b>Bilal Hussain</b>
+                        <span>Home owner</span>
+                    </article>
 
-                <div class="review">
-                    <div class="stars">★★★★★</div>
-                    <p>We bought our plot through Zuraaco Estate. Papers were clear and there were no hidden charges.
+                    <article class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p>Professional from the first call to the final handover. I have recommended them to two friends.</p>
+                        <b>Fatima Noor</b>
+                        <span>Apartment buyer</span>
+                    </article>
+
+                    <article class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p>Found a good shop for my business at a fair price. Every step was explained clearly.</p>
+                        <b>Kamran Ali</b>
+                        <span>Commercial buyer</span>
+                    </article>
+
+                    <article class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p>Our rental was arranged quickly and everything was smooth. Very responsive on WhatsApp too.</p>
+                        <b>Hina Siddiqui</b>
+                        <span>Tenant</span>
+                    </article>
+
+                    <article class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p>Good investment advice and a trustworthy team. Our plot has already gained value.</p>
+                        <b>Usman Sheikh</b>
+                        <span>Investor</span>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FAQ -->
+        <h2 class="h2">Frequently Asked Questions About Properties</h2>
+
+        <section class="sec reveal">
+
+            <div class="wrap" style="max-width:800px; margin:auto;">
+
+                <details>
+                    <summary>Property dekhne ka process kya hai?</summary>
+                    <p>
+                        Property dekhne ke liye Contact Us page par jayein
+                        aur apni property requirements share karein.
+                        Hamari team se viewing ke available time ke liye rabta karein.
                     </p>
-                    <b>Ahmed Raza</b><span>Plot buyer</span>
-                </div>
+                </details>
 
-                <div class="review">
-                    <div class="stars">★★★★★</div>
-                    <p>I was living abroad and they handled the whole purchase for me. Regular updates and honest
-                        advice.
+                <details>
+                    <summary>Kya advance ya commission lagta hai?</summary>
+                    <p>
+                        Advance aur commission property aur agreement
+                        ki conditions par depend kar sakte hain.
+                        Exact details ke liye ZURAACO team se rabta karein.
                     </p>
-                    <b>Sana Malik</b><span>Overseas investor</span>
-                </div>
+                </details>
 
-                <div class="review">
-                    <div class="stars">★★★★★</div>
-                    <p>They showed us only homes that matched our budget. We moved in within a month.</p>
-                    <b>Bilal Hussain</b><span>Home owner</span>
-                </div>
-
-                <div class="review">
-                    <div class="stars">★★★★★</div>
-                    <p>Professional from the first call to the final handover. I have recommended them to two friends.
+                <details>
+                    <summary>Kaun se documents chahiye honge?</summary>
+                    <p>
+                        Required documents property aur transaction ki
+                        type ke mutabiq different ho sakte hain.
+                        Documents ki exact list ke liye hamari team se contact karein.
                     </p>
-                    <b>Fatima Noor</b><span>Apartment buyer</span>
-                </div>
+                </details>
 
-                <div class="review">
-                    <div class="stars">★★★★★</div>
-                    <p>Found a good shop for my business at a fair price. Every step was explained clearly.</p>
-                    <b>Kamran Ali</b><span>Commercial buyer</span>
-                </div>
-
-                <div class="review">
-                    <div class="stars">★★★★★</div>
-                    <p>Our rental was arranged quickly and everything was smooth. Very responsive on WhatsApp too.</p>
-                    <b>Hina Siddiqui</b><span>Tenant</span>
-                </div>
-
-                <div class="review">
-                    <div class="stars">★★★★★</div>
-                    <p>Good investment advice and a trustworthy team. Our plot has already gained value.</p>
-                    <b>Usman Sheikh</b><span>Investor</span>
-                </div>
+                <details>
+                    <summary>Kya aap sale ya plot ki properties bhi dete hain?</summary>
+                    <p>
+                        Residential aur commercial property options,
+                        including plots, ke baare mein maloomat ke liye
+                        hum se rabta karein.
+                    </p>
+                </details>
 
             </div>
 
+        </section>
 
-            </div>
-    </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
+
         <div class="footer-container">
+
             <div class="footer-box">
                 <h2 class="footer-logo">ZURAACO <span>STATE</span></h2>
+
                 <p>
-                    Your trusted partner in real estate. Discover residential
-                    and commercial properties and explore new investment
-                    opportunities with Nuraato State.
+                    Explore residential and commercial properties
+                    and discover real estate opportunities in Karachi
+                    with ZURAACO State.
                 </p>
             </div>
 
             <div class="footer-box">
                 <h3>Quick Links</h3>
+
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="projects.html">For Rent</a></li>
+                    <li><a href="property.html">For Rent</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="footer-box">
                 <h3>Our Services</h3>
+
                 <ul>
                     <li><a href="property.html">Residential Properties</a></li>
                     <li><a href="malir.html">Commercial Properties</a></li>
@@ -943,26 +1171,30 @@
 
             <div class="footer-box">
                 <h3>Contact Us</h3>
+
                 <p>📍 Karachi, Pakistan</p>
                 <p>🏠 Real Estate &amp; Property Investment</p>
                 <p>✉️ Contact us for property inquiries.</p>
             </div>
+
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 Zurqaaco State. All Rights Reserved.</p>
+            <p>© 2026 ZURAACO State. All Rights Reserved.</p>
             <p>Your Trust, Our Commitment.</p>
         </div>
+
     </footer>
 
-    <!-- BOOTSTRAP JS: NAVBAR TOGGLE -->
+    <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- SCROLL ANIMATION -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+
             const sections = document.querySelectorAll(
-                ".about, .property-gallery, .property-gallery1, .footer, .card1, .card2, .card3, .h1, .h2, .card-text4, .services-section"
+                ".about, .property-gallery, .property-gallery1, .footer, .card1, .card2, .card3, .h1, .h2, .card-text4, .services-section, .sec"
             );
 
             sections.forEach(function (section) {
@@ -977,13 +1209,17 @@
             });
 
             const observer = new IntersectionObserver(function (entries) {
+
                 entries.forEach(function (entry) {
+
                     if (entry.isIntersecting) {
                         entry.target.classList.add("show");
                     } else {
                         entry.target.classList.remove("show");
                     }
+
                 });
+
             }, {
                 threshold: 0.12,
                 rootMargin: "0px 0px -30px 0px"
@@ -992,23 +1228,49 @@
             document.querySelectorAll(".reveal, .reveal-card").forEach(function (element) {
                 observer.observe(element);
             });
+
         });
     </script>
 
-
+    <!-- CUSTOMER REVIEWS SLIDER -->
     <script>
         const slider = document.getElementById('slider');
-        const step = 316; // card width 300 + gap 16
 
-        function next() {
-            const end = slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5;
-            slider.scrollTo({ left: end ? 0 : slider.scrollLeft + step });
+        if (slider) {
+
+            const step = 316;
+            let timer;
+
+            function next() {
+
+                const end =
+                    slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5;
+
+                slider.scrollTo({
+                    left: end ? 0 : slider.scrollLeft + step,
+                    behavior: "smooth"
+                });
+
+            }
+
+            function startSlider() {
+                timer = setInterval(next, 3000);
+            }
+
+            function stopSlider() {
+                clearInterval(timer);
+            }
+
+            startSlider();
+
+            slider.addEventListener("mouseenter", stopSlider);
+            slider.addEventListener("mouseleave", startSlider);
+
+            slider.addEventListener("touchstart", stopSlider);
+            slider.addEventListener("touchend", startSlider);
+
         }
-    
-        let timer = setInterval(next, 3000);
-        slider.onmouseenter = () => clearInterval(timer);
-        slider.onmouseleave = () => timer = setInterval(next, 3000);
     </script>
-</body>
 
+</body>
 </html>
